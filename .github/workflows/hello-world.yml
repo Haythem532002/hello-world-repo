@@ -8,4 +8,6 @@ jobs:
        - name: Echo Text
          run: echo Hello, world!
        - name: Display secret
-         run: echo ${{secrets.SUPERSECRET}}
+         env: 
+           super_secret: ${{secrets.SUPERSECRET}} 
+         run: echo $super_secret
