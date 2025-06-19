@@ -1,13 +1,8 @@
 name: Hello World
-on: [push]
-
+'on': push
 jobs:
   hello-job:
-     runs-on: ubuntu-latest
-     steps:
-       - name: Echo Text
-         run: echo Hello, world!
-       - name: Display secret
-         env: 
-           super_secret: ${{secrets.SUPERSECRET}} 
-         run: echo $super_secret
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo text
+        run: 'echo "Hello, world!"'
