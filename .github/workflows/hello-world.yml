@@ -7,3 +7,5 @@ jobs:
      steps:
        - name: Echo Text
          run: 'echo "Hello, world!"'
+       - name: Display secret
+         run: 'echo ${{secrets. SUPERSECRET}} '
