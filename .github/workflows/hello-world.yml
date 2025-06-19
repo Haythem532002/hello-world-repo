@@ -6,6 +6,6 @@ jobs:
      runs-on: ubuntu-latest
      steps:
        - name: Echo Text
-         run: 'echo "Hello, world!"'
+         run: echo Hello, world!
        - name: Display secret
-         run: 'echo ${{secrets. SUPERSECRET}} '
+         run: echo ${{secrets.SUPERSECRET}}
