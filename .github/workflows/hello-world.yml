@@ -1,8 +1,12 @@
-name: Hello World
-'on': push
+name: matrix
+on: push
 jobs:
-  hello-job:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [14, 16]
     steps:
-      - name: Echo text
-        run: 'echo "Hello, world!"'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
